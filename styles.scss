@@ -1,0 +1,146 @@
+// Colors_variables
+$background-color: hsl(30, 54%, 90%);
+$text-color: hsl(30, 10%, 34%);
+$border-color: hsl(30, 18%, 87%);
+$heading-color: hsl(14, 45%, 36%);
+$preparation-bg-color: hsl(330, 100%, 98%);
+$heading-secondary-color: hsl(332, 51%, 32%);
+$page-bg-color: hsl(0, 0%, 100%);
+
+// Spacing_variables
+$padding-xsmall: 10px;
+$padding-small: 20px;
+$padding-medium: 30px;
+$margin-large: 60px;
+$border-radius: 15px;
+
+@mixin pageContent-sizing {
+    margin-top: $margin-large !important;
+    margin-bottom: $margin-large !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: $border-radius;
+    padding: $padding-medium;
+
+    img {
+        border-radius: $border-radius;
+    }
+}
+
+body {
+    background-color: $background-color;
+    font-family: "Outfit", sans-serif;
+    color: $text-color;
+    margin: 0;
+}
+
+.pageContent {
+    width: 100%;
+    background-color: $page-bg-color;
+}
+
+img {
+    width: 100%;
+}
+
+.content {
+    padding: $padding-small;
+}
+
+header {
+    padding-left: $padding-small;
+    padding-right: $padding-small;
+}
+
+figure {
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    color: hsl(24, 5%, 18%);
+}
+
+h1,
+h2 {
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+}
+
+strong {
+    color: $text-color;
+}
+
+.preparation {
+    background-color: $preparation-bg-color;
+    padding-left: $padding-medium;
+    padding-top: $padding-xsmall;
+    padding-bottom: $padding-xsmall;
+    border-radius: $padding-xsmall;
+}
+
+h3 {
+    color: $heading-secondary-color;
+    font-weight: 600;
+}
+
+h2 {
+    color: $heading-color;
+}
+
+ol,
+.quantity {
+    color: $heading-color;
+    font-weight: 800;
+}
+
+.listContent {
+    color: $text-color;
+    font-weight: 400;
+}
+
+li {
+    padding-left: $padding-medium;
+    margin-bottom: $padding-small;
+}
+
+hr {
+    color: $border-color;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    border-bottom: 1px solid $border-color;
+    padding: 15px;
+    padding-left: $padding-medium;
+}
+
+.lastRow {
+    border: none;
+}
+
+@media only screen and (min-width: 568px) {
+    .pageContent {
+        width: 70%;
+        @include pageContent-sizing;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .pageContent {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .pageContent {
+        width: 50%;
+    }
+}
