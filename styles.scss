@@ -1,0 +1,147 @@
+// Colors_variables
+$background-color: hsl(30, 54%, 90%);
+$text-color: hsl(30, 10%, 34%);
+$border-color: hsl(30, 18%, 87%);
+$heading-color: hsl(14, 45%, 36%);
+$preparation-bg-color: hsl(330, 100%, 98%);
+$heading-secondary-color: hsl(332, 51%, 32%);
+$page-bg-color: hsl(0, 0%, 100%);
+
+// Spacing_variables
+$padding-xsmall: 10px;
+$padding-small: 20px;
+$padding-medium: 30px;
+$margin-large: 60px;
+$border-radius: 15px;
+
+@mixin pageContent-sizing {
+    margin-top: $margin-large !important;
+    margin-bottom: $margin-large !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: $border-radius;
+    padding: $padding-medium;
+
+    img {
+        border-radius: $border-radius;
+    }
+}
+
+.page-content {
+    background-color: $background-color;
+    font-family: "Outfit", sans-serif;
+    color: $text-color;
+    margin: 0;
+}
+
+.page-content__main {
+    width: 100%;
+    background-color: $page-bg-color;
+}
+
+.page-content__image {
+    width: 100%;
+}
+
+.page-content__body {
+    padding: $padding-small;
+}
+
+.page-content__header {
+    padding-left: $padding-small;
+    padding-right: $padding-small;
+}
+
+.page-content__figure {
+    width: 100%;
+    margin: auto;
+}
+
+.page-content__heading-primary {
+    color: hsl(24, 5%, 18%);
+}
+
+.page-content__heading-primary,
+.page-content__heading-secondary {
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+.page-content__paragraph {
+    font-size: 16px;
+}
+
+.page-content__strong {
+    color: $text-color;
+}
+
+.preparation {
+    background-color: $preparation-bg-color;
+    padding-left: $padding-medium;
+    padding-top: $padding-xsmall;
+    padding-bottom: $padding-xsmall;
+    border-radius: $padding-xsmall;
+}
+
+.page-content__heading-secondary {
+    color: $heading-secondary-color;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+}
+
+.page-content__heading-primary {
+    color: $heading-color;
+}
+
+.page-content__list-number,
+.page-content__quantity {
+    color: $heading-color;
+    font-weight: 800 ;
+}
+
+.page-content__list {
+    color: $text-color;
+    font-weight: 400;
+}
+
+.page-content__list-item {
+    padding-left: $padding-medium;
+    margin-bottom: $padding-small;
+}
+
+.page-content__hr {
+    color: $border-color;
+}
+
+.page-content__table {
+    width: 100%;
+}
+
+.page-content__table-data {
+    border-bottom: 1px solid $border-color;
+    padding: 15px;
+    padding-left: $padding-medium;
+}
+
+.page-content__last-row {
+    border: none;
+}
+
+@media only screen and (min-width: 568px) {
+    .page-content__main {
+        width: 70%;
+        @include pageContent-sizing;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .page-content__main {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .page-content__main {
+        width: 50%;
+    }
+}
