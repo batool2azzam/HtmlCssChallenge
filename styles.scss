@@ -27,51 +27,51 @@ $border-radius: 15px;
     }
 }
 
-body {
+.page-content {
     background-color: $background-color;
     font-family: "Outfit", sans-serif;
     color: $text-color;
     margin: 0;
 }
 
-.pageContent {
+.page-content__main {
     width: 100%;
     background-color: $page-bg-color;
 }
 
-img {
+.page-content__image {
     width: 100%;
 }
 
-.content {
+.page-content__body {
     padding: $padding-small;
 }
 
-header {
+.page-content__header {
     padding-left: $padding-small;
     padding-right: $padding-small;
 }
 
-figure {
+.page-content__figure {
     width: 100%;
     margin: auto;
 }
 
-h1 {
+.page-content__heading-primary {
     color: hsl(24, 5%, 18%);
 }
 
-h1,
-h2 {
+.page-content__heading-primary,
+.page-content__heading-secondary {
     font-family: "Young Serif";
     font-weight: 400;
 }
 
-p {
+.page-content__paragraph {
     font-size: 16px;
 }
 
-strong {
+.page-content__strong {
     color: $text-color;
 }
 
@@ -83,64 +83,65 @@ strong {
     border-radius: $padding-xsmall;
 }
 
-h3 {
+.page-content__heading-secondary {
     color: $heading-secondary-color;
     font-weight: 600;
+    font-family: "Outfit", sans-serif;
 }
 
-h2 {
+.page-content__heading-primary {
     color: $heading-color;
 }
 
-ol,
-.quantity {
+.page-content__list-number,
+.page-content__quantity {
     color: $heading-color;
-    font-weight: 800;
+    font-weight: 800 ;
 }
 
-.listContent {
+.page-content__list {
     color: $text-color;
     font-weight: 400;
 }
 
-li {
+.page-content__list-item {
     padding-left: $padding-medium;
     margin-bottom: $padding-small;
 }
 
-hr {
+.page-content__hr {
     color: $border-color;
 }
 
-table {
+.page-content__table {
     width: 100%;
 }
 
-td {
+.page-content__table-data {
     border-bottom: 1px solid $border-color;
     padding: 15px;
     padding-left: $padding-medium;
 }
 
-.lastRow {
+.page-content__last-row {
     border: none;
 }
 
 @media only screen and (min-width: 568px) {
-    .pageContent {
+    .page-content__main {
         width: 70%;
         @include pageContent-sizing;
     }
 }
 
 @media only screen and (min-width: 769px) {
-    .pageContent {
+    .page-content__main {
         width: 65%;
     }
 }
 
 @media only screen and (min-width: 1025px) {
-    .pageContent {
+    .page-content__main {
         width: 50%;
     }
 }
